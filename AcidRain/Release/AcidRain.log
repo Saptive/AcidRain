@@ -1,0 +1,470 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  main.cpp
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(7,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(8,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(9,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(10,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(11,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(12,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(16,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(17,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(18,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(19,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(20,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(21,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(38,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(38,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(44,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(45,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(46,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(47,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(48,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(49,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(50,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(51,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(52,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(53,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,13): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(54,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,79): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,79): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(55,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(56,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,1): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,25): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,25): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(57,91): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,7): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,7): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,19): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,19): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,31): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,31): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,43): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,43): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(58,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,37): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,49): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,49): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,55): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,55): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,61): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,61): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,67): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,67): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,73): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,73): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,85): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,85): warning C4309: 'initializing': truncation of constant value
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,91): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Matuka\Desktop\AcidRain\AcidRain\src\binaries.h(59,91): warning C4309: 'initializing': truncation of constant value
+  Generating code
+  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  AcidRain.vcxproj -> C:\Users\Matuka\Desktop\AcidRain\output\AcidRain.exe
