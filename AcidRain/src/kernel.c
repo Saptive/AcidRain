@@ -24,63 +24,30 @@ enum color
 	VGA_COLOR_LIGHT_CYAN = 11,
 	VGA_COLOR_LIGHT_RED = 12,
 	VGA_COLOR_LIGHT_MAGENTA = 13,
-	VGA_COLOR_LIGHT_BROWN = 14,
+	VGA_COLOR_LIGHT_BROWN = 14, //yellow
 	VGA_COLOR_WHITE = 15,
 };
 
+
+#define VGA_WIDTH 80
+#define VGA_HEIGHT 25
+
+
 const char* videoMemoryPtr = (char*)0xb8000;
 
-//void WriteChar(char* character, enum color Color)
-//{
-//
-//	//volatile char* videoMemoryPtr = (char*)0xb8000;
-//
-//
-//	//first byte is the character we want to print
-//	*videoMemoryPtr = *character;
-//	//increment by one byte
-//	videoMemoryPtr++;
-//	//second byte is the color
-//	*videoMemoryPtr = (unsigned char)Color;
-//	//increment to next character
-//	videoMemoryPtr++;
-//}
 
-//__attribute__((noinline)) void WriteString(const char* string, enum color color, int x, int y)
-//{
-//	char* videoMemoryPtr = (char*)0xb8000;
-//	char* addr = videoMemoryPtr + 2 * (80 * y + x);
-//
-//	for (unsigned int i = 0; string[i] != '\0'; i++)
-//	{
-//		*addr = string[i];
-//		addr++;
-//		*addr = (char)color;
-//		addr++;
-//	}
-//
-//}
-
-void ClearScreen();
+void ClearScreen(enum color color);
 void Print(const char* string, int x, int y, enum color color);
+void Stage1(int col);
 
 
 
 void _start()
 {
-	ClearScreen();
-	Print("AcidRain 2025", 0, 0, VGA_COLOR_BROWN);
-
-
-	char seperator = 219;
-
+	ClearScreen(VGA_COLOR_BLACK);
 	
-
-	for (int i = 0; i < 25; i++)
-	{
-		Print(seperator, i, 2, VGA_COLOR_WHITE);
-	}
-
+	Stage1(2);
+	
 
 
 	while (1)
@@ -104,13 +71,78 @@ void Print(const char* string, int x, int y, enum color color)
 	}
 }
 
-void ClearScreen()
+void ClearScreen(enum color color)
 {
 	char* addr = videoMemoryPtr;
 
-	for (int i = 0; i < 80 * 25; i++)
+	for (int i = 0; i < VGA_WIDTH * VGA_HEIGHT; i++)
 	{
 		*addr = ' ';
-		addr += 2;
+		addr++;
+		*addr = color;
+		addr++;
 	}
+}
+
+
+void Stage1(int col)
+{
+
+	const char* art[] = {
+		"                   ...=%@@@@@@%+...                   ",
+		"                .-%%*------------*%@-.                ",
+		"              :%#=------------------=#%:              ",
+		"            .##--=%%--------------%%+--#%.            ",
+		"           -@=-=@@@@@------------%@@@@=-=@=           ",
+		"          +%--%@@@@@@@=--------=@@@@@@@%--%*          ",
+		"         -%--%@@@@@@@@@--------@@@@@@@@@%--%-         ",
+		"        .@=-#@@@@@@@@@@@=----=@@@@@@@@@@@%-=@:        ",
+		"        -%-=@@@@@@@@@@@+-*@@*-=@@@@@@@@@@@=-%=        ",
+		"        +*-=@@@@@@@@@@*=@@@@@@=+@@@@@@@@@@+-*+        ",
+		"        +*-------------=@@@@@@=-------------**        ",
+		"        -%---------------*@@*---------------%=        ",
+		"        .@=-------------%%##%%-------------=@:        ",
+		"         -%------------@@@@@@@@------------%-         ",
+		"          *%----------%@@@@@@@@%----------#*          ",
+		"           =@=-------@@@@@@@@@@@@=-------@=           ",
+		"            .%#----=@@@@@@@@@@@@@@=----*%.            ",
+		"              :%#=--=#@@@@@@@@@@#=--=#%:              ",
+		"                .-@%*------------+%@=.                ",
+		"                   ..:+%@@@@@@%+:..                   "
+	};
+
+
+
+	if (col == 1) //black bg
+	{
+
+		//ClearScreen(VGA_COLOR_BLACK);
+
+
+		Print("AcidRain 2025", 33, 0, VGA_COLOR_LIGHT_BROWN);
+
+		int j = 2;
+		for (int i = 0; i < 20; i++)
+		{
+			Print(art[i], 13, j, VGA_COLOR_LIGHT_BROWN);
+			j++;
+		}
+
+		Print("Press any key...", 31, 23, VGA_COLOR_LIGHT_BROWN);
+	}
+	else if(col == 2) //yellow bg
+	{
+		ClearScreen(VGA_COLOR_LIGHT_BROWN);
+		Print("AcidRain 2025", 33, 0, VGA_COLOR_BLACK);
+
+		int j = 2;
+		for (int i = 0; i < 20; i++)
+		{
+			Print(art[i], 13, j, VGA_COLOR_BLACK);
+			j++;
+		}
+
+		Print("Press any key...", 31, 23, VGA_COLOR_BLACK);
+	}
+
 }
