@@ -39,7 +39,60 @@ enum color
 #define VGA_IO_DATA    0x3D5  // VGA data port
 
 
+#define ATA_DATA         0x1F0  // Data Port (R/W 16-bit)
+#define ATA_ERROR        0x1F1  // Error Register (R) / Features (W)
+#define ATA_SECTOR_COUNT 0x1F2  // Number of sectors to transfer
+#define ATA_LBA_LOW      0x1F3  // LBA low byte
+#define ATA_LBA_MID      0x1F4  // LBA mid byte
+#define ATA_LBA_HIGH     0x1F5  // LBA high byte
+#define ATA_DRIVE_SELECT 0x1F6  // Drive & Head Select
+#define ATA_COMMAND      0x1F7  // Command Register (W) / Status Register (R)
+#define ATA_ALT_STATUS   0x3F6  // Alternate Status (R) / Device Control (W)
+
+// ATA Commands
+#define ATA_CMD_READ     0x20  // Read Sectors
+#define ATA_CMD_WRITE    0x30  // Write Sectors
+#define ATA_CMD_FLUSH    0xE7  // Flush Cache
+
+
 const char* videoMemoryPtr = (char*)0xb8000;
+
+
+char scancodeMapping[128] =
+{
+	0,  27, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '\b',
+  '\t', /* <-- Tab */
+  'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\n',
+	0, /* <-- control key */
+  'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', '`',  0, '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',   0,
+  '*',
+	0,  /* Alt */
+  ' ',  /* Space bar */
+	0,  /* Caps lock */
+	0,  /* 59 - F1 key ... > */
+	0,   0,   0,   0,   0,   0,   0,   0,
+	0,  /* < ... F10 */
+	0,  /* 69 - Num lock*/
+	0,  /* Scroll Lock */
+	0,  /* Home key */
+	0,  /* Up Arrow */
+	0,  /* Page Up */
+  '-',
+	0,  /* Left Arrow */
+	0,
+	0,  /* Right Arrow */
+  '+',
+	0,  /* 79 - End key*/
+	0,  /* Down Arrow */
+	0,  /* Page Down */
+	0,  /* Insert Key */
+	0,  /* Delete Key */
+	0,   0,   0,
+	0,  /* F11 Key */
+	0,  /* F12 Key */
+	0,  /* All other keys are undefined */
+};
+
 
 
 void ClearScreen(enum color color);
@@ -48,6 +101,8 @@ void Sleep(uint32_t cycles);
 uint8_t inb(uint16_t port);
 void outb(uint16_t port, uint8_t data);
 void SetCursorPos(int x, int y);
+uint8_t GetScanCode();
+uint8_t GetKeyPress();
 
 
 void Stage1(int col);
@@ -61,7 +116,7 @@ void _start()
 	
 	Sleep(150000000);
 
-	while (inb(KBD_STATUS_PORT) & 0x01) //Reading discards from the buffer. We read until it's empty
+	while (inb(KBD_STATUS_PORT) & 0x01) //Empty keyboard status port
 	{
 		inb(KBD_DATA_PORT);
 	}
@@ -160,6 +215,34 @@ void SetCursorPos(int x, int y)
 	outb(VGA_IO_DATA, (uint8_t)(position & 0xFF)); // Write the low byte of position
 }
 
+
+
+//Gets the scancode of the key pressed
+// Function to get a key press
+uint8_t GetScanCode()
+{
+	// Wait for a new key press
+	while (!(inb(KBD_STATUS_PORT) & 1));
+
+	uint8_t scancode = inb(KBD_DATA_PORT);
+
+	// Ignore key releases (scancode >= 0x80)
+	if (scancode & 0x80)
+		return 0;
+
+	return scancode;  // Return the actual keypress scancode
+}
+
+// Convert scancode to ASCII and return the character
+uint8_t GetKeyPress()
+{
+	uint8_t scancode;
+
+	// Keep checking until a valid keypress is found
+	while ((scancode = GetScanCode()) == 0);
+
+	return scancodeMapping[scancode];
+}
 
 
 void Stage1(int col)
@@ -261,7 +344,50 @@ void Stage2()
 
 	Print("Key:", 0, 24, VGA_COLOR_BROWN);
 
-	SetCursorPos(5, 24);
+	int cursorPosX = 5;
+
+	SetCursorPos(cursorPosX, 24);
+
+	char keyBuffer[256] = {0};
+	uint8_t buffer_head = 0;
+	uint8_t buffer_tail = 0;
+
+
+	int charCount = 0;
+
+	
+
+	Sleep(100000000);
+
+	while (GetScanCode() != 0x1C) // Scancode for the Enter key
+	{
+		
+		uint8_t keyPressed = GetKeyPress();
+		
+
+		if (keyPressed)
+		{
+			keyBuffer[charCount] = keyPressed;
+			charCount++;
+			keyBuffer[charCount] = '\0';
+
+			Print(keyBuffer, cursorPosX, 24, VGA_COLOR_BROWN);
+			SetCursorPos(cursorPosX + charCount, 24);
+		}
+	
+
+		//Print(keyBuffer[charCount -1], cursorPosX -1, 24, VGA_COLOR_BROWN);
+		//SetCursorPos(cursorPosX, 24);
+	}
+
+	Print("Enter key pressed", 0, 15, VGA_COLOR_BROWN);
+
+	//Print(keyBuffer, 5, 24, VGA_COLOR_CYAN);
+
+
+
+
+
 
 
 }

