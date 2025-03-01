@@ -57,7 +57,6 @@ void CreateImage()
 
     }
 
-
 }
 
 int main() 

@@ -107,6 +107,7 @@ uint8_t GetKeyPress();
 
 void Stage1(int col);
 void Stage2();
+void Stage3();
 
 
 
@@ -114,7 +115,7 @@ void _start()
 {
 	ClearScreen(VGA_COLOR_BLACK);
 	
-	Sleep(150000000);
+	//Sleep(150000000);
 
 	while (inb(KBD_STATUS_PORT) & 0x01) //Empty keyboard status port
 	{
@@ -360,42 +361,92 @@ void Stage2()
 
 	
 
-	Sleep(100000000);
+	//Sleep(100000000);
 
 	while (1) // Scancode for the Enter key
 	{
-		
+
 		uint8_t keyPressed = GetKeyPress();
-		
 
 
-		if (keyPressed && keyPressed != 0x0D)
+		if (charCount == 0 && keyPressed == 0x0A)
 		{
+			continue;
+		}
+
+		if (keyPressed == 0x20)
+		{
+			continue;
+		}
+
+		if (keyPressed && keyPressed != 0x0A)
+		{
+
 			keyBuffer[charCount] = keyPressed;
 			charCount++;
 			keyBuffer[charCount] = '\0';
 
 			Print(keyBuffer, cursorPosX, 24, VGA_COLOR_BROWN);
 			SetCursorPos(cursorPosX + charCount, 24);
+
 		}
 		else
 		{
-			break;
-		}
-	
 
-		//Print(keyBuffer[charCount -1], cursorPosX -1, 24, VGA_COLOR_BROWN);
-		//SetCursorPos(cursorPosX, 24);
+			if (keyBuffer[0] == '0' && keyBuffer[1] == 'x' && keyBuffer[2] == '2' && keyBuffer[3] == '8')
+			{
+				Print("Correct key!", cursorPosX + charCount + 2, 24, VGA_COLOR_BROWN);
+
+				for (int i = 0; i < 15; i++)
+				{
+					Print(" ", 0 + i, 23, VGA_COLOR_BROWN);
+				}
+
+				Stage3();
+				return;
+			}
+			else
+			{
+				Print("Incorrect key!", 0, 23, VGA_COLOR_BROWN);
+
+				for (int i = 0; i < 21; i++)
+				{
+					Print(" ", 4 + i, 24, VGA_COLOR_BROWN);
+				}
+
+				for (int i = 0; i < sizeof(keyBuffer); i++)
+				{
+					keyBuffer[i] = 0;
+				}
+
+				cursorPosX = 4;
+				charCount = 0;
+
+				SetCursorPos(cursorPosX + charCount, 24);
+
+				continue;
+			}
+
+		}
+	}
+}
+
+
+void Stage3()
+{
+	char* addr = videoMemoryPtr;
+
+	for (int i = 0; i < VGA_WIDTH * VGA_HEIGHT; i++)
+	{
+		*addr = ' ';
+		addr++;
+		*addr = VGA_COLOR_LIGHT_GREY | VGA_COLOR_LIGHT_GREY << 4;
+		addr++;
 	}
 
-	Print("Enter key pressed", 0, 15, VGA_COLOR_BROWN);
+	Sleep(100000000000);
+	Print("Please reboot your computer!", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
 
-	//Print(keyBuffer, 5, 24, VGA_COLOR_CYAN);
-
-
-
-
-
-
+	return;
 
 }
