@@ -31,7 +31,6 @@
 *.out
 *.app
 
+*.pdb
+dbg.bxrc
 /.vs/
-dbg.bxrc
-*.bxrc
-dbg.bxrc
