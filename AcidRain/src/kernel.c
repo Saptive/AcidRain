@@ -122,24 +122,24 @@ void _start()
 	}
 
 
-	while(1)
-	{
+	//while(1)
+	//{
 
 
 
-		Stage1(1);
-		Sleep(80000000);
-		Stage1(2);
-		Sleep(80000000);
+	//	Stage1(1);
+	//	Sleep(80000000);
+	//	Stage1(2);
+	//	Sleep(80000000);
 
 
-		if (inb(KBD_STATUS_PORT) & 0x01) // if bit 0 is set, data is available 
-		{
-			//uint8_t scancode = inb(KBD_DATA_PORT);
-			break;
-		
-		}
-	}
+	//	if (inb(KBD_STATUS_PORT) & 0x01) // if bit 0 is set, data is available 
+	//	{
+	//		//uint8_t scancode = inb(KBD_DATA_PORT);
+	//		break;
+	//	
+	//	}
+	//}
 	
 
 	Stage2();
@@ -244,6 +244,13 @@ uint8_t GetKeyPress()
 	return scancodeMapping[scancode];
 }
 
+uint8_t AsciiToScancode(uint8_t keypress)
+{
+	
+	return scancodeMapping[keypress];
+
+}
+
 
 void Stage1(int col)
 {
@@ -344,28 +351,25 @@ void Stage2()
 
 	Print("Key:", 0, 24, VGA_COLOR_BROWN);
 
-	int cursorPosX = 5;
+	int cursorPosX = 4;
 
 	SetCursorPos(cursorPosX, 24);
 
 	char keyBuffer[256] = {0};
-	uint8_t buffer_head = 0;
-	uint8_t buffer_tail = 0;
-
-
 	int charCount = 0;
 
 	
 
 	Sleep(100000000);
 
-	while (GetScanCode() != 0x1C) // Scancode for the Enter key
+	while (1) // Scancode for the Enter key
 	{
 		
 		uint8_t keyPressed = GetKeyPress();
 		
 
-		if (keyPressed)
+
+		if (keyPressed && keyPressed != 0x0D)
 		{
 			keyBuffer[charCount] = keyPressed;
 			charCount++;
@@ -373,6 +377,10 @@ void Stage2()
 
 			Print(keyBuffer, cursorPosX, 24, VGA_COLOR_BROWN);
 			SetCursorPos(cursorPosX + charCount, 24);
+		}
+		else
+		{
+			break;
 		}
 	
 
