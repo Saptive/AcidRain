@@ -33,4 +33,8 @@
 
 dbg.bxrc
 /.vs/
-
+/AcidRain/Debug
+/AcidRain/Release
+*.pdb
+/util/Debug
+/util/Release
