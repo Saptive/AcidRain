@@ -527,7 +527,7 @@ void Stage3()
 	}
 
 
-	Print("Please reboot your computer!", 0, 2, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+	Print("Please reboot your computer!", 0, 10, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
 
 	return;
 
@@ -539,10 +539,6 @@ void Stage3()
 void DecryptMBR()
 {
 
-	Print("called ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
-
-
-
 	uint8_t buffer[512] = {0};
 
 	//master drive
@@ -552,9 +548,9 @@ void DecryptMBR()
 	outb(ATA_SECTOR_COUNT, 1);
 
 	// Send LBA address (28-bit)
-	outb(ATA_LBA_LOW, 15 & 0xFF);
-	outb(ATA_LBA_MID, (15 >> 8) & 0xFF);
-	outb(ATA_LBA_HIGH, (15 >> 16) & 0xFF);
+	outb(ATA_LBA_LOW, 18 & 0xFF);
+	outb(ATA_LBA_MID, (18 >> 8) & 0xFF);
+	outb(ATA_LBA_HIGH, (18 >> 16) & 0xFF);
 
 	//send read command
 	outb(ATA_COMMAND, ATA_CMD_READ);
@@ -586,7 +582,7 @@ void DecryptMBR()
 			Print("512 / 512 Done!", 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
 		}
 
-		//Sleep(9000000);
+		Sleep(9000000);
 
 		uint16_t data = inw(ATA_DATA);
 		
@@ -608,6 +604,24 @@ void DecryptMBR()
 			uint8_t byte = buffer[i];
 			byte = byte ^ 0x28;
 			buffer[i] = byte;
+
+			Print("Decrypting sector: ", 0, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+			char str[10];
+
+			itoa(i, str);
+
+			Print(str, 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+
+			Print("/ 512", 20, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+
+			if (i == 510)
+			{
+				Print("512 / 512 Done!", 16, 0, VGA_COLOR_BROWN | VGA_COLOR_LIGHT_GREY << 4);
+			}
+
 		}
 		
 		
@@ -618,11 +632,11 @@ void DecryptMBR()
 		outb(ATA_SECTOR_COUNT, 1);
 
 		// Send LBA address (28-bit)
-		outb(ATA_LBA_LOW, 15 & 0xFF);
-		outb(ATA_LBA_MID, (15 >> 8) & 0xFF);
-		outb(ATA_LBA_HIGH, (15 >> 16) & 0xFF);
+		outb(ATA_LBA_LOW, 0 & 0xFF);
+		outb(ATA_LBA_MID, (0 >> 8) & 0xFF);
+		outb(ATA_LBA_HIGH, (0 >> 16) & 0xFF);
 
-		//send read command
+		//send write command
 		outb(ATA_COMMAND, ATA_CMD_WRITE);
 		
 		while (inb(ATA_STATUS) & 0x80);  // Wait for busy flag to clear

