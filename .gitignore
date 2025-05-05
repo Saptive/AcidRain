@@ -38,3 +38,4 @@ dbg.bxrc
 *.pdb
 /util/Debug
 /util/Release
+*.bak
