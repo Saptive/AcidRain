@@ -11,8 +11,7 @@ This project is developed purely for fun, aiming to analyze disk encryption tech
 - **Disk I/O operations** - The kernel can read and write the disk using ATA I/O ports.
 
 ## Description
-A user-mode application running on Windows, given sufficient privileges, encrypts and backs up the original MBR, writes a custom bootloader to sector 0, and stores the kernel starting at sector 1 of the primary disk. Once completed, the application exits. *(TODO: trigger system restart.)*
-
+A user-mode application running on Windows, given sufficient privileges, encrypts and backs up the original MBR, writes a custom bootloader to sector 0, and stores the kernel starting at sector 1 of the primary disk. Once completed, the application triggers a BSOD using **NtRaiseHardError**. 
 When the system boots, the custom bootloader loads the kernel into memory, waits for a keypress, and then jumps to the kernel's entry point.
 
 The kernel handles user keyboard input. Upon receiving the correct decryption key, it reads sector 18 (which holds the encrypted original MBR), decrypts it using XOR with the key `0x28`, and writes the result back to sector 0 to restore the original MBR. All disk operations are done via ATA PIO  *(TODO: replace XOR with Salsa20 for encryption and decryption.)*
